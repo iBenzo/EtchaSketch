@@ -1,0 +1,39 @@
+html{
+    background: url(images/ombreBackground.png) no-repeat center center fixed; 
+    background-size: cover;
+}
+
+#boxContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+#changeGridSizeBtn{
+    background-color: blue;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#gridContainer{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    padding: 10px;
+}
+.box{
+    width: 58px;
+    height: 48px;
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+}
+
+#userGridContainer{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    padding: 10px;
+}
