@@ -74,6 +74,25 @@ btn.addEventListener('click', (event) =>{
     for (let i = 0; i < finalUserGridSize * finalUserGridSize; i++){
         const boxDiv = document.createElement('div');
         boxDiv.className = "box";
+
+        let boxWitdh = Math.round(960/finalUserGridSize) - 2;
+        let boxHeight = Math.round(720/finalUserGridSize) - 2;
+        
+        function changeGridHeightWidth(){    
+            let elements = document.getElementsByClassName("box");
+            let elementLegnth = elements.length;
+            for (let x = 0; x < elementLegnth; x++) {
+                elements[x].style.width=(boxWitdh+"px");
+                elements[x].style.height=(boxHeight+'px');
+            }
+        }
         gridContainer.append(boxDiv);
+        changeGridHeightWidth();
+        let boxes = document.querySelectorAll('.box');
+        boxes.forEach((box) => {
+            box.addEventListener('mouseover', (event) =>{
+                event.target.style.backgroundColor = randomColor();
+            });
+        });
     }
 })
